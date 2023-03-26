@@ -12,7 +12,7 @@
 //
 // Попытка добавить 1 минуту к отметке 23:59 должна приводить к установке времени на отметку 00:00.
 
-public class TimeStamp {
+public class TimeStamp implements Comparable<TimeStamp>{
   private int hours = 0;
   private int minutes = 0;
 
@@ -53,4 +53,12 @@ public class TimeStamp {
         ", minutes=" + minutes +
         '}';
   }
+
+  @Override
+  public int compareTo(TimeStamp otherTime) {
+    int time1 = getHours() * 24 + getMinutes();
+    int time2 = otherTime.getHours() * 24 + otherTime.getMinutes();
+    return time1 - time2;
+  }
+
 }
