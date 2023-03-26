@@ -29,10 +29,7 @@ public class TimeStamp {
   }
 
   public void addHours(int hours){
-    int a = getHours();
-    int b = a - hours;
-    int c = b % 24;
-    setHours(getHours() + hours);
+   setHours(getHours() + hours);
   }
 
   @Override
