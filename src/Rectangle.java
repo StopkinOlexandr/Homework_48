@@ -28,7 +28,7 @@ public class Rectangle {
 
   public Rectangle(int sideA, int sideB) {
     this.sideA = sideA;
-    this.sideA = sideB;
+    this.sideB = sideB;
   }
 
   @Override
